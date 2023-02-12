@@ -1,0 +1,81 @@
+JFDML JFormDesigner: "7.0.4.0.360" Java: "11.0.10" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq l {space :p:35:p, par l {seq {par l {comp rdbFire::l:p::p, comp rdbSoil::l:p::p, comp rdbIce::l:p::p, comp rdbWind:::p::p}, space ::223:x}, seq {par l {comp rdbTeam1:::p::p, comp btnBack::t:p:100:p}, space s:::p, par l {comp rdbTeam2:::p::p, par t:l::p {seq {comp lblRow:::p::p, space :::x, comp spnRow:::p:52:p}, seq l {comp lblColumn:::p::p, space :::p, comp spnColumn:::p:52:p}}, seq l {space :p:8:p, comp btnCreate:::p:100:p}}, space :0:40:x}}}}"
+			"$verticalGroup": "par l {seq {space :p:30:p, par b {comp rdbTeam1::b:p::p, comp rdbTeam2::b:p::p}, space :p:34:p, par l {seq l {space :p:2:p, par b {comp lblRow::b:p:34:p, comp spnRow::b:p::p}, space :::x, par b {comp lblColumn::b:p:32:p, comp spnColumn::b:p::p}}, seq l {comp rdbIce:::p::p, space :::p, comp rdbFire:::p::p, space :::p, comp rdbWind:::p::p, space :p:4:p, comp rdbSoil:::p::p}}, space s:::p, par b {comp btnCreate::b:p:40:p, comp btnBack::b:p:40:p}, space :p:15:p}}"
+		} ) {
+			name: "this"
+			"title": "Create Hero"
+			add( new FormComponent( "javax.swing.JRadioButton" ) {
+				name: "rdbTeam1"
+				"text": "First Team"
+				"font": &Font0 new java.awt.Font( "Comic Sans MS", 0, 16 )
+				"selected": true
+			} )
+			add( new FormComponent( "javax.swing.JRadioButton" ) {
+				name: "rdbTeam2"
+				"text": "Second Team"
+				"font": #Font0
+			} )
+			add( new FormComponent( "javax.swing.JRadioButton" ) {
+				name: "rdbIce"
+				"text": "Ice"
+				"font": #Font0
+				"selected": true
+			} )
+			add( new FormComponent( "javax.swing.JRadioButton" ) {
+				name: "rdbFire"
+				"text": "Fire"
+				"font": #Font0
+			} )
+			add( new FormComponent( "javax.swing.JRadioButton" ) {
+				name: "rdbWind"
+				"text": "Wind"
+				"font": #Font0
+			} )
+			add( new FormComponent( "javax.swing.JRadioButton" ) {
+				name: "rdbSoil"
+				"text": "Soil"
+				"font": #Font0
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "lblRow"
+				"text": "Row :"
+				"font": &Font1 new java.awt.Font( "Comic Sans MS", 0, 16 )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "lblColumn"
+				"text": "Column :"
+				"font": #Font1
+			} )
+			add( new FormComponent( "javax.swing.JSpinner" ) {
+				name: "spnRow"
+				"model": new javax.swing.SpinnerNumberModel( 1, 1, 2, 1 )
+				"font": #Font1
+			} )
+			add( new FormComponent( "javax.swing.JSpinner" ) {
+				name: "spnColumn"
+				"model": new javax.swing.SpinnerNumberModel( 1, 1, 1, 1 )
+				"font": #Font1
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btnCreate"
+				"text": "Create"
+				"font": #Font1
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnCreateActionPerformed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btnBack"
+				"text": "Back"
+				"font": #Font1
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnBackActionPerformed", true ) )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 320, 300 )
+		} )
+	}
+}

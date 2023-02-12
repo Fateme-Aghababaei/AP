@@ -1,0 +1,58 @@
+JFDML JFormDesigner: "7.0.4.0.360" Java: "11.0.10" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+			name: "this"
+			"title": "Game"
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq l {space :p:25:p, comp lblTeam1:::p::p, space :::p}}"
+				"$verticalGroup": "par l {seq l {space :p:28:p, comp lblTeam1:::p::p, space :p:30:p}}"
+			} ) {
+				name: "panelTeam1"
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "lblTeam1"
+					"text": "First Team :"
+					"font": &Font0 new java.awt.Font( "Comic Sans MS", 0, 16 )
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "North"
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq l {space :p:14:p, comp lblTeam2:::p::p, space ::316:x, comp btnSave:::p:90:p, space :p:26:p, comp btnExit:::p:90:p, space :p:48:p}}"
+				"$verticalGroup": "par l {seq t {space ::24:x, par b {comp lblTeam2::b:p::p, comp btnExit::b:p:40:p, comp btnSave::b:p:40:p}, space :p:26:p}}"
+			} ) {
+				name: "panelTeam2"
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "lblTeam2"
+					"text": "Second Team :"
+					"font": #Font0
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "btnSave"
+					"text": "Save"
+					"font": &Font1 new java.awt.Font( "Comic Sans MS", 0, 16 )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "btnExit"
+					"text": "Exit"
+					"font": #Font1
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "South"
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) {
+				"columns": 10
+				"rows": 10
+			} ) {
+				name: "panelGame"
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "Center"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 695, 555 )
+		} )
+	}
+}

@@ -1,0 +1,108 @@
+JFDML JFormDesigner: "7.0.4.0.360" Java: "11.0.10" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq l {space :p:197:p, comp lblTitle:::p::p, space ::205:x}, seq t {par l {seq l {space :p:38:p, par l {comp rdbReadFromFile::l:p::p, comp rdbCreateNewGame::l:p::p}, space ::55:x, par l {comp lblColumns:::p::p, comp lblRows:::p::p, comp lblFile:::p:160:p}, space :p:12:p}, seq t {par t {seq {space :p:26:p, comp btnStart:::p:150:p, space ::48:x, comp btnScores:::p:150:p}, seq {space :0:317:x, par l:::p {comp spnRows::::57:x, comp spnColumns::::57:x}}}, space :p:45:p}}, par l {comp btnHero:::p:150:p, comp btnExit:::p:150:p, comp btnBrowse::l:p:150:p, comp btnCastle::l:p:150:p}, space :p:34:p}}"
+			"$verticalGroup": "par l {seq {space :p:24:p, comp lblTitle:::p::p, space :p:36:p, par b {comp btnBrowse::b:p:45:p, comp rdbReadFromFile::b:p::p, comp lblFile::b:p::p}, space s:::p, par b {comp btnHero::b:p:45:p, comp rdbCreateNewGame::b:p::p, comp lblRows::b:p::p, comp spnRows::b:p::p}, space :::p, par b {comp lblColumns::b:p::p, comp btnCastle::b:p:45:p, comp spnColumns::b:p::p}, space :p:23:p, par b {comp btnStart::b:p:45:p, comp btnExit::b:p:45:p, comp btnScores::b:p:45:p}, space :p:19:p}}"
+		} ) {
+			name: "this"
+			"title": "Start"
+			"defaultCloseOperation": 3
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btnBrowse"
+				"text": "Browse"
+				"font": &Font0 new java.awt.Font( "Comic Sans MS", 0, 16 )
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnBrowseActionPerformed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "lblTitle"
+				"text": "BATTLE OF HEROES"
+				"font": new java.awt.Font( "Comic Sans MS", 0, 20 )
+				"horizontalAlignment": 0
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btnHero"
+				"text": "Create Hero"
+				"font": #Font0
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnHeroActionPerformed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "lblRows"
+				"text": "Rows :"
+				"font": &Font1 new java.awt.Font( "Comic Sans MS", 0, 14 )
+				"horizontalAlignment": 0
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "lblColumns"
+				"text": "Columns :"
+				"font": #Font1
+				"horizontalAlignment": 0
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btnStart"
+				"text": "Start"
+				"font": #Font0
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btnExit"
+				"text": "Exit"
+				"font": #Font0
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnExitActionPerformed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btnScores"
+				"text": "Score Board"
+				"font": #Font0
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "lblFile"
+				"text": "File : "
+				"font": #Font1
+				"horizontalAlignment": 2
+			} )
+			add( new FormComponent( "javax.swing.JRadioButton" ) {
+				name: "rdbReadFromFile"
+				"text": "Read From File"
+				"horizontalAlignment": 0
+				"font": &Font2 new java.awt.Font( "Comic Sans MS", 0, 16 )
+				addEvent( new FormEvent( "java.awt.event.ItemListener", "itemStateChanged", "rdbReadFromFileItemStateChanged", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JRadioButton" ) {
+				name: "rdbCreateNewGame"
+				"text": "Create New Game"
+				"horizontalAlignment": 0
+				"font": #Font2
+				addEvent( new FormEvent( "java.awt.event.ItemListener", "itemStateChanged", "rdbCreateNewGameItemStateChanged", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btnCastle"
+				"text": "Set Castle"
+				"font": #Font0
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnCastleActionPerformed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JSpinner" ) {
+				name: "spnRows"
+				"font": &Font3 new java.awt.Font( "Comic Sans MS", 0, 16 )
+				"model": new javax.swing.SpinnerNumberModel {
+					minimum: 1
+					value: 10
+				}
+				addEvent( new FormEvent( "javax.swing.event.ChangeListener", "stateChanged", "spnRowsStateChanged", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JSpinner" ) {
+				name: "spnColumns"
+				"font": #Font3
+				"model": new javax.swing.SpinnerNumberModel {
+					minimum: 1
+					value: 10
+				}
+				addEvent( new FormEvent( "javax.swing.event.ChangeListener", "stateChanged", "spnColumnsStateChanged", true ) )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 605, 365 )
+		} )
+	}
+}

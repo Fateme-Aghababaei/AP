@@ -1,0 +1,60 @@
+JFDML JFormDesigner: "7.0.4.0.360" Java: "11.0.10" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq {par l {seq l {space :p:32:p, par l {comp rdbTeam2::l:p::p, comp rdbTeam1::l:p::p}}, seq l {space :p:70:p, comp btnBack:::p:100:p}}, space :p:27:p, par l {comp btnSet:::p:100:p, par l:::p {seq {comp lblColumn:::p::p, space :::x, comp spnColumn:::p:52:p}, seq {comp lblRow:::p::p, space :p:57:p, comp spnRow:::p:52:p}}}, space ::27:x}}"
+			"$verticalGroup": "par l {seq l {space :p:16:p, par b {comp rdbTeam1::b:p::p, comp lblRow::b:p:34:p, comp spnRow::b:p:34:p}, space :p:17:p, par b {comp rdbTeam2::b:p::p, comp lblColumn::b:p:32:p, comp spnColumn::b:p:34:p}, space :p:19:p, par b {comp btnBack::b:p:40:p, comp btnSet::b:p:40:p}, space ::28:x}}"
+		} ) {
+			name: "this"
+			"title": "Set Castle"
+			add( new FormComponent( "javax.swing.JRadioButton" ) {
+				name: "rdbTeam1"
+				"text": "First Team"
+				"font": &Font0 new java.awt.Font( "Comic Sans MS", 0, 16 )
+				"selected": true
+			} )
+			add( new FormComponent( "javax.swing.JRadioButton" ) {
+				name: "rdbTeam2"
+				"text": "Second Team"
+				"font": #Font0
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "lblRow"
+				"text": "Row :"
+				"font": &Font1 new java.awt.Font( "Comic Sans MS", 0, 16 )
+			} )
+			add( new FormComponent( "javax.swing.JSpinner" ) {
+				name: "spnRow"
+				"model": new javax.swing.SpinnerNumberModel( 1, 1, 1, 1 )
+				"font": #Font1
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "lblColumn"
+				"text": "Column :"
+				"font": #Font1
+			} )
+			add( new FormComponent( "javax.swing.JSpinner" ) {
+				name: "spnColumn"
+				"model": new javax.swing.SpinnerNumberModel( 1, 1, 1, 1 )
+				"font": #Font1
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btnSet"
+				"text": "Set"
+				"font": #Font1
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnSetActionPerformed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btnBack"
+				"text": "Back"
+				"font": #Font1
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnBackActionPerformed", true ) )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 5, 0 )
+			"size": new java.awt.Dimension( 375, 220 )
+		} )
+	}
+}
